@@ -1,0 +1,25 @@
+  <!-- Sidenav -->
+    <div class="scrollbar-inner">
+      <!-- Brand -->
+      <div class="sidenav-header  align-items-center">
+        <a class="navbar-brand" href="javascript:void(0)">
+          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        </a>
+      </div>
+      <div class="navbar-inner">
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+          <!-- Nav items -->
+          <!-- {{navs|json}} -->
+          <ul class="navbar-nav">
+            <li class="nav-item" *ngFor="let item of navs">
+              <a class="nav-link" [routerLink]="item.navUrl" >
+                <i class="text-primary" [ngClass]="item.iconCssClass"></i>
+                <span class="nav-link-text">{{item.title}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
